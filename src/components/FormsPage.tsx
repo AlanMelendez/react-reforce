@@ -30,6 +30,8 @@ const FormsPage = () => {
     console.log('Value form:',data);
   }
 
+  
+
   return (
     <div>
         <form onSubmit={handleSubmit(sendDataAPI)} className='flex flex-col space-y-4 items-center'>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { User } from '../interfaces/reqres.response'
+import { Datum, User } from '../interfaces/reqres.response'
 import { loadUserActions } from '../actions/load-user.action'
 
 const useUser = () => {
@@ -8,7 +8,7 @@ const useUser = () => {
 
     useEffect(() => {
         loadUserActions(1)
-        .then((users:any) => setUsers(users))
+        .then((users:User[]) => setUsers(users))
     }, [])
 
   return {

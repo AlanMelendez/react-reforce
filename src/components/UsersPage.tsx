@@ -25,7 +25,12 @@ export const UsersPage = () => {
           </tr>
         </thead>
         <tbody>
-          <UserRow />
+          {
+            users.map((user:any) => (
+              <UserRow key={user.id} user={user} />
+            ))
+          }
+
         </tbody>
 
       </table>

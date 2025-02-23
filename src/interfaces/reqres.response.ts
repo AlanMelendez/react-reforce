@@ -1,13 +1,13 @@
-export interface User {
+export interface UserList {
     page:        number;
     per_page:    number;
     total:       number;
     total_pages: number;
-    data:        Datum[];
+    data:        User[];
     support:     Support;
 }
 
-export interface Datum {
+export interface User {
     id:         number;
     email:      string;
     first_name: string;

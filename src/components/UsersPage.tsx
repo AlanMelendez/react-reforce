@@ -9,7 +9,7 @@ export const UsersPage = () => {
 
 
 
-  const {users} = useUser();
+  const {users, prevPage, nextPage} = useUser();
 
   console.log('Users: ', users);
 
@@ -36,8 +36,8 @@ export const UsersPage = () => {
       </table>
 
       <div className="flex justify-between w-[500px] mx-auto mt-5">
-        <button className='p-2 bg-blue-400 text-white rounded-xl'>Anterior</button>
-        <button className='p-2 bg-blue-400 text-white rounded-xl'>Siguiente</button>
+        <button onClick={()=> prevPage()} className='p-2 bg-blue-400 text-white rounded-xl'>Anterior</button>
+        <button onClick={()=> nextPage()} className='p-2 bg-blue-400 text-white rounded-xl'>Siguiente</button>
 
       </div>
               
